@@ -1,0 +1,39 @@
+<?php
+$cont1 = 1;
+$cont2 = 1;
+$cont3 = 1;
+$cont4 = 1;
+$cont5 = 1;
+$cont6 = 1;
+$cont7 = 1;
+$cont8 = 1;
+$cont9 = 1;
+$cont10 = 1;
+$cont11 = 1;
+$cont12 = 1;
+$cont13 = 1;
+$cont14 = 1;
+$cont15 = 1;
+$cont16 = 1;
+$cont17 = 1;
+$cont18 = 1;
+
+$yopal = (47.5 * $data_tamano['volumen']) / 100;
+$villanueva = (11.1 * $data_tamano['volumen']) / 100;
+$aguazul = (7.9 * $data_tamano['volumen']) / 100;
+$paz = (6.4 * $data_tamano['volumen']) / 100;
+$trinidad = (2.8 * $data_tamano['volumen']) / 100;
+$tauramena = (6.3 * $data_tamano['volumen']) / 100;
+$tamara = (0.6 * $data_tamano['volumen']) / 100;
+$sanluis = (1.1 * $data_tamano['volumen']) / 100;
+$sacama = (0.3 * $data_tamano['volumen']) / 100;
+$pore = (2.1 * $data_tamano['volumen']) / 100;
+$orocue = (1.9 * $data_tamano['volumen']) / 100;
+$nunchia = (1.2 * $data_tamano['volumen']) / 100;
+$monterrey = (5 * $data_tamano['volumen']) / 100;
+$mani = (3.7 * $data_tamano['volumen']) / 100;
+$hato = (1.2 * $data_tamano['volumen']) / 100;
+$chameza = (0.3 * $data_tamano['volumen']) / 100;
+$sabanalarga = (0.6 * $data_tamano['volumen']) / 100;
+$lasalina = (0.2 * $data_tamano['volumen']) / 100;
+?>
