@@ -13,19 +13,19 @@ if(isset($_POST['btnAccion'])){
             $telefono_persona = $_POST['telefono__persona'];
             $programa_persona = $_POST['programa__persona'];
             $rol_persona = $_POST['rol__persona'];
-            $contra__persona = $_POST['contra__persona'];
+            $estado_persona = $_POST['estado__persona'];
+            $contrasena = $_POST['contra__persona'];
 
-            $contrasena = 'Sena'.$contra__persona.'*';
 
             $InsertarPersona = $conexion->prepare("INSERT INTO persona VALUES 
             (NULL,'$tipo_persona','$numero_persona','$nombre_persona','$apellido_persona',
-            '$programa_persona','$rol_persona','$telefono_persona','Fuera de Linea','$contrasena',NOW())");
+            '$programa_persona','$rol_persona','$telefono_persona',$estado_persona,'$contrasena',NOW())");
             $InsertarPersona->execute();
 
             if(!$InsertarPersona){
                 echo "Registro fallido";
             }else{
-                header('location:../registrar_ai.php');
+                header('location:../listar_ai.php');
             }
             die();
         break;
@@ -36,10 +36,11 @@ if(isset($_POST['btnAccion'])){
             $nombre_persona = $_POST['nombre__persona'];
             $apellido_persona = $_POST['apellido__persona'];
             $telefono_persona = $_POST['telefono__persona'];
+            $estado_persona = $_POST['estado__persona'];
             $programa_persona = $_POST['programa__persona'];
             $rol_persona = $_POST['rol__persona'];
 
-            $contrasena = 'Sena'.$numero_persona.'*';
+            $contrasena = $_POST['contra__persona'];
 
             $ActulizarPersona = $conexion->prepare("UPDATE persona 
             SET tipo_identificacion='$tipo_persona',
@@ -49,6 +50,7 @@ if(isset($_POST['btnAccion'])){
             programa='$programa_persona',
             rol='$rol_persona',
             telefono='$telefono_persona',
+            estado = '$estado_persona',
             contrasena = '$contrasena' WHERE id = $id ");
             $ActulizarPersona->execute();
 

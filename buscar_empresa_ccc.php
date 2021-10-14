@@ -55,7 +55,6 @@ require_once 'views/header.php';
                             <th>Correo</th>
                             <th>Municipio</th>
                             <th>Personal</th>
-                            <th>Estado</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -91,16 +90,6 @@ require_once 'views/header.php';
                                 <td><?php echo $fila['correo'] ?></td>
                                 <td><?php echo $fila['municipio'] ?></td>
                                 <td><?php echo $fila['personal'] ?></td>
-                                <td>
-                                    <?php
-                                    $consulta_estado = $conexion->prepare("SELECT * FROM muestra WHERE id_empresa = $idx");
-                                    $consulta_estado->execute();
-                                    if ($consulta_estado->rowCount() > 0) { ?>
-                                        <div class="badge badge-pill badge-primary">Seleccionada</div>
-                                    <?php } else { ?>
-                                        <div class="badge badge-pill badge-danger">No seleccionada</div>
-                                    <?php } ?>
-                                </td>
                                 <td><a class='btn btn-primary' href='registrar_empresa_ccc.php?id=<?php echo $fila['Id'] ?>'>Editar</a></td>
                             </tr>
                         <?php endforeach ?>

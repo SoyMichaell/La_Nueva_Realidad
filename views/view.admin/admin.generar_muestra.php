@@ -1,6 +1,6 @@
 <?php
     /*Consulta tabla muestra, para tener un conteo de registros*/
-    $sql_muestra = $conexion->prepare("SELECT * FROM muestra");
+    $sql_muestra = $conexion->prepare("SELECT * FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa=empresas_2020.nit");
     $sql_muestra->execute();
     $data_muestra = $sql_muestra->fetch(PDO::FETCH_ASSOC);
     /*Fin consulta*/
@@ -11,14 +11,12 @@
         <div class="col-md-12">
             <div class="tile">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-12">
                         <p style="font-size: 28px;">Empresas seleccionadas para el proceso de encuestas</p>
                         <hr>
                     </div>
-                    <div class="d-flex justify-content-end col-md-4">
-                        <form action="controller/empresa.controlador.php" method="post">
-                            <button class="btn btn-danger" name="btnAccion" value="EliminarMuestra" type="submit">Eliminar muestra</button>
-                        </form>
+                    <div class="p-3">
+                        <a class="btn btn-light" href="https://docs.google.com/spreadsheets/d/1qwHbDJ_mY11vR93ZZhC3VT-7GZSpGnOR41M7VC_X-no/edit?usp=sharing" target="_blank">Aplicativo proceso encuestas</a>
                     </div>
                 </div>
                 <br>
@@ -40,14 +38,16 @@
                     <tbody>
                         <?php
                             /*Consulta tabla muestra - empresas_2020, esta consulta permite mostrar la información de las empresas seleccionadas*/
-                            $consultaMuestra = $conexion->prepare("SELECT * FROM muestra INNER JOIN empresas_2020 ON muestra.id_empresa=empresas_2020.Id");
+                            $consultaMuestra = $conexion->prepare("SELECT * FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa=empresas_2020.nit");
                             $consultaMuestra->execute();
                             $dataMuestra = $consultaMuestra->fetchAll(PDO::FETCH_ASSOC);
                             /*Fin consulta*/
+                            $id = 1;
                             foreach ($dataMuestra as $muestra) :
+                                
                         ?>
                             <tr>
-                                <td><?php echo $muestra['id_empresa']; $idm = $muestra['id_muestra']; ?></td>
+                                <td><?php echo $id++; ?></td>
                                 <td><?php echo $muestra['nit']; ?></td>
                                 <td><?php echo $muestra['razon_social']; ?></td>
                                 <td><?php echo $muestra['ciiu_actividad1'] ?></td>
@@ -55,20 +55,7 @@
                                 <td><?php echo $muestra['correo']; ?></td>
                                 <td><?php echo $muestra['telefono1']; ?></td>
                                 <td><?php echo $muestra['municipio']; ?></td>
-                                <td>
-                                <?php
-                                    /*Consulta estado de las empresas en el proceso de encuestas*/ 
-                                    $consultaEstado = $conexion->prepare("SELECT * FROM muestra WHERE (id_muestra = $idm AND estado_encuesta = 'Sin responder')");
-                                    $consultaEstado->execute();
-                                    /*Fin consulta*/
-                                    if ($consultaEstado->rowCount() > 0) { ?>
-                                        <div class="badge badge-pill badge-danger">Sin responder</div>
-                                    <?php } else { ?>
-                                        <div class="badge badge-pill badge-primary">Finalizado</div>
-                                    <?php 
-                                          } 
-                                ?>
-                                </td>
+                                <td><div class="badge badge-pill badge-primary">Finalizado</div></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>

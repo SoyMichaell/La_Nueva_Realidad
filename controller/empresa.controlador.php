@@ -92,7 +92,7 @@ if (isset($_POST['btnAccion'])) {
             if (!$ActualizarEmpresaCCC) {
                 echo "Algo fallo";
             } else {
-                header('location: ../dashboard.php');
+                header('location: ../listar_empresa_ccc.php');
             }
             die();
             break;

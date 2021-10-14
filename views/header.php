@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="<?php echo SERVERURL ?>assets/fontawesome-free/css/all.css">
     <!--Estilos dataTables-->
     <link rel="stylesheet" href="<?php echo SERVERURL ?>assets/dataTables/datatables.css">
+    <!--Estilos FPDF-->
+    <link rel="stylesheet" href="<?php echo SERVERURL ?>assets/fpdf/fpdf.css">
 </head>
 <body class="app sidebar-mini">
     <!--Header-->
@@ -43,7 +45,7 @@
     <aside class="app-sidebar">
         <div class="app-sidebar__user">
             <div>
-                <p class="app-sidebar__user-name"><?php echo $data['nombre'] . " " . $data['apellido']; ?></p>
+                <p class="app-sidebar__user-name"><?php echo $data['nombre']?></p>
                 <p class="app-sidebar__user-designation"><?php echo $data['rol']; ?></p>
             </div>
         </div>

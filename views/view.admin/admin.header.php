@@ -15,7 +15,7 @@
     </li>
     <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-server"></i><span class="app-menu__label">Muestra</span><i class="treeview-indicator fa fa-angle-right"></i></a>
         <ul class="treeview-menu">
-            <li><a class="treeview-item" href="generar_muestra.php"><i class="icon far fa-circle"></i>Generar muestra</a></li>
+            <li><a class="treeview-item" href="generar_muestra.php"><i class="icon far fa-circle"></i>Empresas Encuestadas</a></li>
         </ul>
     </li>
     <li><a class="app-menu__item" href="encuesta.php"><i class="app-menu__icon fa fa-chart-pie"></i><span class="app-menu__label">Encuesta</span></a></li>

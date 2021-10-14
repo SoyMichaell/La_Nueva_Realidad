@@ -1,6 +1,5 @@
 <div class="row">
     <div class="col-md-12">
-        <h2 id="titulo"><i class="fa fa-info-circle"></i> Por favor diligenciar la Información de manera correcta.</h2>
         <div class="tile">
             <h4 id="titulo">Registro de vinculados al proyecto LA NUEVA REALIDAD.</h4>
             <form action="controller/persona.controlador.php" method="post">
@@ -40,39 +39,40 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="">Numero de identificación</label>
-                            <input class="form-control" type="number" name="numero__persona" id="numero__persona" value="<?php echo isset($_GET['id']) != '' ? $data_persona['numero_identificacion'] : '' ?>" required>
+                            <input class="form-control" type="number" name="numero__persona" id="numero__persona" placeholder="Introduzca numero de documento" value="<?php echo isset($_GET['id']) != '' ? $data_persona['numero_identificacion'] : '' ?>" required>
                         </div>
                     </div>
                     <!--Fin cajon-->
                 </div>
                 <!--Cajon grupal NOMBRE,APELLIDO-->
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <label for="">Nombre(s)</label>
-                        <input class="form-control" type="text" name="nombre__persona" id="nombre__persona" value="<?php echo isset($_GET['id']) != '' ? $data_persona['nombre'] : '' ?>" required>
+                        <input class="form-control" type="text" name="nombre__persona" id="nombre__persona" placeholder="Introduzca nombre..." value="<?php echo isset($_GET['id']) != '' ? $data_persona['nombre'] : '' ?>" required>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="form-group">
                             <label for="">Apellido(s)</label>
-                            <input class="form-control" type="text" name="apellido__persona" id="apellido__persona" value="<?php echo isset($_GET['id']) != '' ? $data_persona['apellido'] : '' ?>" required>
+                            <input class="form-control" type="text" name="apellido__persona" id="apellido__persona" placeholder="Introduzca apellido..." value="<?php echo isset($_GET['id']) != '' ? $data_persona['apellido'] : '' ?>" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="">Telefono</label>
+                            <input class="form-control" type="text" name="telefono__persona" id="telefono__persona" placeholder="Introduzca telefono..." value="<?php echo isset($_GET['id']) != '' ? $data_persona['telefono'] : '' ?>" required>
                         </div>
                     </div>
                 </div>
                 <!--Fin cajon-->
                 <!--Cajon grupal TELEFONO,PROGRAMA,ROL-->
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="form-group">
-                            <label for="">Telefono</label>
-                            <input class="form-control" type="text" name="telefono__persona" id="telefono__persona" value="<?php echo isset($_GET['id']) != '' ? $data_persona['telefono'] : '' ?>" required>
-                        </div>
-                    </div>
+                <div class="row"> 
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="">Programa</label>
                             <select class="form-control" name="programa__persona" id="programa__persona">
                                 <option value="<?php echo isset($_GET['id']) != '' ? $data_persona['programa'] : 'programa' ?>"><?php echo isset($_GET['id']) != '' ? $data_persona['programa'] : 'Seleccione programa' ?></option>
-                                <option value="Tecnico Contabilizacion de Operaciones Comerciales y Financieras">Tecnico Contabilizacion de Operaciones Comerciales y Financieras</option>
+                                <option value="Tecnico Contabilizacion de Operaciones Comerciales y Financieras">Técnico Contabilizacion de Operaciones Comerciales y Financieras</option>
+                                <option value="Tecnico en Sistemas">Técnico en Sistemas</option>
                                 <option value="Tecnología en gestión administrativa">Tecnología en gestión administratíva</option>
                                 <option value="Tecnología en gestión de proyectos de desarrollo económico y social">Tecnología en gestión de proyectos de desarrollo económico y social</option>
                                 <option value="Tecnología en gestión empresarial">Tecnología en gestión empresarial</option>
@@ -91,6 +91,16 @@
                                 <option value="Aprendiz">Aprendiz</option>
                                 <option value="Instructor">Instructor</option>
                                 <option value="Sennova">Sennova</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="">Estado</label>
+                            <select class="form-control" name="estado__persona" id="estado__persona">
+                                <option value="<?php echo isset($_GET['id']) != '' ? $data_persona['estado'] : 'estado' ?>"><?php echo isset($_GET['id']) != '' ? $data_persona['estado'] : 'Seleccione estado' ?></option>
+                                <option value="1">Activo</option>
+                                <option value="2">Inactivo</option>
                             </select>
                         </div>
                     </div>

@@ -121,7 +121,7 @@
                     data.addColumn('number', 'Slices');
                     data.addRows([
                         <?php
-                        $sql_ccc = $conexion->prepare("SELECT municipio, count(*) as cuenta FROM muestra INNER JOIN empresas_2020 ON muestra.id_empresa=empresas_2020.Id GROUP BY municipio");
+                        $sql_ccc = $conexion->prepare("SELECT municipio, count(*) as cuenta FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa=empresas_2020.nit GROUP BY municipio");
                         $sql_ccc->execute();
                         $data_ccc = $sql_ccc->fetchAll(PDO::FETCH_ASSOC);
                         foreach ($data_ccc as $ccc) :
@@ -297,67 +297,67 @@
                     data.addColumn('number', 'Slices');
                     data.addRows([
                     <?php
-                        $sql_A = $conexion->prepare("SELECT COUNT(*) as cuentaA FROM muestra INNER JOIN empresas_2020 ON muestra.id_empresa = empresas_2020.Id WHERE SUBSTRING(ciiu_actividad1,1,1) = 'A'");
+                        $sql_A = $conexion->prepare("SELECT COUNT(*) as cuentaA FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa = empresas_2020.nit WHERE SUBSTRING(ciiu_actividad1,1,1) = 'A'");
                         $sql_A->execute();
                         $data_A = $sql_A->fetch();
-                        $sql_B = $conexion->prepare("SELECT COUNT(*) as cuentaB FROM muestra INNER JOIN empresas_2020 ON muestra.id_empresa = empresas_2020.Id WHERE SUBSTRING(ciiu_actividad1,1,1) = 'B'");
+                        $sql_B = $conexion->prepare("SELECT COUNT(*) as cuentaB FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa = empresas_2020.nit WHERE SUBSTRING(ciiu_actividad1,1,1) = 'B'");
                         $sql_B->execute();
                         $data_B = $sql_B->fetch();
-                        $sql_C = $conexion->prepare("SELECT COUNT(*) as cuentaC FROM muestra INNER JOIN empresas_2020 ON muestra.id_empresa = empresas_2020.Id WHERE SUBSTRING(ciiu_actividad1,1,1) = 'C'");
+                        $sql_C = $conexion->prepare("SELECT COUNT(*) as cuentaC FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa = empresas_2020.nit WHERE SUBSTRING(ciiu_actividad1,1,1) = 'C'");
                         $sql_C->execute();
                         $data_C = $sql_C->fetch();
-                        $sql_D = $conexion->prepare("SELECT COUNT(*) as cuentaD FROM muestra INNER JOIN empresas_2020 ON muestra.id_empresa = empresas_2020.Id WHERE SUBSTRING(ciiu_actividad1,1,1) = 'A'");
+                        $sql_D = $conexion->prepare("SELECT COUNT(*) as cuentaD FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa = empresas_2020.nit WHERE SUBSTRING(ciiu_actividad1,1,1) = 'A'");
                         $sql_D->execute();
                         $data_D = $sql_D->fetch();
-                        $sql_E = $conexion->prepare("SELECT COUNT(*) as cuentaE FROM muestra INNER JOIN empresas_2020 ON muestra.id_empresa = empresas_2020.Id WHERE SUBSTRING(ciiu_actividad1,1,1) = 'E'");
+                        $sql_E = $conexion->prepare("SELECT COUNT(*) as cuentaE FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa = empresas_2020.nit WHERE SUBSTRING(ciiu_actividad1,1,1) = 'E'");
                         $sql_E->execute();
                         $data_E = $sql_E->fetch();
-                        $sql_F = $conexion->prepare("SELECT COUNT(*) as cuentaF FROM muestra INNER JOIN empresas_2020 ON muestra.id_empresa = empresas_2020.Id WHERE SUBSTRING(ciiu_actividad1,1,1) = 'F'");
+                        $sql_F = $conexion->prepare("SELECT COUNT(*) as cuentaF FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa = empresas_2020.nit WHERE SUBSTRING(ciiu_actividad1,1,1) = 'F'");
                         $sql_F->execute();
                         $data_F = $sql_F->fetch();
-                        $sql_G = $conexion->prepare("SELECT COUNT(*) as cuentaG FROM muestra INNER JOIN empresas_2020 ON muestra.id_empresa = empresas_2020.Id WHERE SUBSTRING(ciiu_actividad1,1,1) = 'G'");
+                        $sql_G = $conexion->prepare("SELECT COUNT(*) as cuentaG FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa = empresas_2020.nit WHERE SUBSTRING(ciiu_actividad1,1,1) = 'G'");
                         $sql_G->execute();
                         $data_G = $sql_G->fetch();
-                        $sql_H = $conexion->prepare("SELECT COUNT(*) as cuentaH FROM muestra INNER JOIN empresas_2020 ON muestra.id_empresa = empresas_2020.Id WHERE SUBSTRING(ciiu_actividad1,1,1) = 'H'");
+                        $sql_H = $conexion->prepare("SELECT COUNT(*) as cuentaH FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa = empresas_2020.nit WHERE SUBSTRING(ciiu_actividad1,1,1) = 'H'");
                         $sql_H->execute();
                         $data_H = $sql_H->fetch();
-                        $sql_I = $conexion->prepare("SELECT COUNT(*) as cuentaI FROM muestra INNER JOIN empresas_2020 ON muestra.id_empresa = empresas_2020.Id WHERE SUBSTRING(ciiu_actividad1,1,1) = 'I'");
+                        $sql_I = $conexion->prepare("SELECT COUNT(*) as cuentaI FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa = empresas_2020.nit WHERE SUBSTRING(ciiu_actividad1,1,1) = 'I'");
                         $sql_I->execute();
                         $data_I = $sql_I->fetch();
-                        $sql_J = $conexion->prepare("SELECT COUNT(*) as cuentaJ FROM muestra INNER JOIN empresas_2020 ON muestra.id_empresa = empresas_2020.Id WHERE SUBSTRING(ciiu_actividad1,1,1) = 'J'");
+                        $sql_J = $conexion->prepare("SELECT COUNT(*) as cuentaJ FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa = empresas_2020.nit WHERE SUBSTRING(ciiu_actividad1,1,1) = 'J'");
                         $sql_J->execute();
                         $data_J = $sql_J->fetch();
-                        $sql_K = $conexion->prepare("SELECT COUNT(*) as cuentaK FROM muestra INNER JOIN empresas_2020 ON muestra.id_empresa = empresas_2020.Id WHERE SUBSTRING(ciiu_actividad1,1,1) = 'K'");
+                        $sql_K = $conexion->prepare("SELECT COUNT(*) as cuentaK FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa = empresas_2020.nit WHERE SUBSTRING(ciiu_actividad1,1,1) = 'K'");
                         $sql_K->execute();
                         $data_K = $sql_K->fetch();
-                        $sql_L = $conexion->prepare("SELECT COUNT(*) as cuentaL FROM muestra INNER JOIN empresas_2020 ON muestra.id_empresa = empresas_2020.Id WHERE SUBSTRING(ciiu_actividad1,1,1) = 'L'");
+                        $sql_L = $conexion->prepare("SELECT COUNT(*) as cuentaL FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa = empresas_2020.nit WHERE SUBSTRING(ciiu_actividad1,1,1) = 'L'");
                         $sql_L->execute();
                         $data_L = $sql_L->fetch();
-                        $sql_M = $conexion->prepare("SELECT COUNT(*) as cuentaM FROM muestra INNER JOIN empresas_2020 ON muestra.id_empresa = empresas_2020.Id WHERE SUBSTRING(ciiu_actividad1,1,1) = 'M'");
+                        $sql_M = $conexion->prepare("SELECT COUNT(*) as cuentaM FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa = empresas_2020.nit WHERE SUBSTRING(ciiu_actividad1,1,1) = 'M'");
                         $sql_M->execute();
                         $data_M = $sql_M->fetch();
-                        $sql_N = $conexion->prepare("SELECT COUNT(*) as cuentaN FROM muestra INNER JOIN empresas_2020 ON muestra.id_empresa = empresas_2020.Id WHERE SUBSTRING(ciiu_actividad1,1,1) = 'N'");
+                        $sql_N = $conexion->prepare("SELECT COUNT(*) as cuentaN FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa = empresas_2020.nit WHERE SUBSTRING(ciiu_actividad1,1,1) = 'N'");
                         $sql_N->execute();
                         $data_N = $sql_N->fetch();
-                        $sql_O = $conexion->prepare("SELECT COUNT(*) as cuentaO FROM muestra INNER JOIN empresas_2020 ON muestra.id_empresa = empresas_2020.Id WHERE SUBSTRING(ciiu_actividad1,1,1) = 'O'");
+                        $sql_O = $conexion->prepare("SELECT COUNT(*) as cuentaO FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa = empresas_2020.nit WHERE SUBSTRING(ciiu_actividad1,1,1) = 'O'");
                         $sql_O->execute();
                         $data_O = $sql_O->fetch();
-                        $sql_P = $conexion->prepare("SELECT COUNT(*) as cuentaP FROM muestra INNER JOIN empresas_2020 ON muestra.id_empresa = empresas_2020.Id WHERE SUBSTRING(ciiu_actividad1,1,1) = 'P'");
+                        $sql_P = $conexion->prepare("SELECT COUNT(*) as cuentaP FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa = empresas_2020.nit WHERE SUBSTRING(ciiu_actividad1,1,1) = 'P'");
                         $sql_P->execute();
                         $data_P = $sql_P->fetch();
-                        $sql_Q = $conexion->prepare("SELECT COUNT(*) as cuentaQ FROM muestra INNER JOIN empresas_2020 ON muestra.id_empresa = empresas_2020.Id WHERE SUBSTRING(ciiu_actividad1,1,1) = 'Q'");
+                        $sql_Q = $conexion->prepare("SELECT COUNT(*) as cuentaQ FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa = empresas_2020.nit WHERE SUBSTRING(ciiu_actividad1,1,1) = 'Q'");
                         $sql_Q->execute();
                         $data_Q = $sql_Q->fetch();
-                        $sql_R = $conexion->prepare("SELECT COUNT(*) as cuentaR FROM muestra INNER JOIN empresas_2020 ON muestra.id_empresa = empresas_2020.Id WHERE SUBSTRING(ciiu_actividad1,1,1) = 'R'");
+                        $sql_R = $conexion->prepare("SELECT COUNT(*) as cuentaR FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa = empresas_2020.nit WHERE SUBSTRING(ciiu_actividad1,1,1) = 'R'");
                         $sql_R->execute();
                         $data_R = $sql_R->fetch();
-                        $sql_S = $conexion->prepare("SELECT COUNT(*) as cuentaS FROM muestra INNER JOIN empresas_2020 ON muestra.id_empresa = empresas_2020.Id WHERE SUBSTRING(ciiu_actividad1,1,1) = 'S'");
+                        $sql_S = $conexion->prepare("SELECT COUNT(*) as cuentaS FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa = empresas_2020.nit WHERE SUBSTRING(ciiu_actividad1,1,1) = 'S'");
                         $sql_S->execute();
                         $data_S = $sql_S->fetch();
-                        $sql_T = $conexion->prepare("SELECT COUNT(*) as cuentaT FROM muestra INNER JOIN empresas_2020 ON muestra.id_empresa = empresas_2020.Id WHERE SUBSTRING(ciiu_actividad1,1,1) = 'T'");
+                        $sql_T = $conexion->prepare("SELECT COUNT(*) as cuentaT FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa = empresas_2020.nit WHERE SUBSTRING(ciiu_actividad1,1,1) = 'T'");
                         $sql_T->execute();
                         $data_T = $sql_T->fetch();
-                        $sql_U = $conexion->prepare("SELECT COUNT(*) as cuentaU FROM muestra INNER JOIN empresas_2020 ON muestra.id_empresa = empresas_2020.Id WHERE SUBSTRING(ciiu_actividad1,1,1) = 'U'");
+                        $sql_U = $conexion->prepare("SELECT COUNT(*) as cuentaU FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa = empresas_2020.nit WHERE SUBSTRING(ciiu_actividad1,1,1) = 'U'");
                         $sql_U->execute();
                         $data_U = $sql_U->fetch();
                         ?>['<?php echo 'A - Agricultura. Ganadería. Caza. Silvicultura Y Pesca'; ?>', <?php echo $data_A['cuentaA']; ?>],
@@ -410,7 +410,7 @@
             <?php $sql_i = $conexion->prepare("SELECT * FROM persona WHERE rol = 'Instructor'");
             $sql_i->execute();
             $resultado_i = $sql_i->rowCount(); ?>
-            <h4>Aprendices e Instructores</h4>
+            <h4>Aprendices e Instructores Iniciales</h4>
             <script type="text/javascript">
                 // Load the Visualization API and the corechart package.
                 google.charts.load('current', {
@@ -449,6 +449,55 @@
             </script>
             <!--Div that will hold the pie chart-->
             <div id="chart_div"></div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="tile tile-border-top">
+            <?php $sql_a = $conexion->prepare("SELECT * FROM persona WHERE (rol = 'Aprendiz' AND estado = 1)");
+            $sql_a->execute();
+            $resultado_a = $sql_a->rowCount(); ?>
+            <?php $sql_i = $conexion->prepare("SELECT * FROM persona WHERE (rol = 'Instructor' AND estado = 1)");
+            $sql_i->execute();
+            $resultado_i = $sql_i->rowCount(); ?>
+            <h4>Aprendices e Instructores en proceso de encuestas</h4>
+            <script type="text/javascript">
+                // Load the Visualization API and the corechart package.
+                google.charts.load('current', {
+                    'packages': ['corechart']
+                });
+
+                // Set a callback to run when the Google Visualization API is loaded.
+                google.charts.setOnLoadCallback(drawChart);
+
+                // Callback that creates and populates a data table,
+                // instantiates the pie chart, passes in the data and
+                // draws it.
+                function drawChart() {
+
+                    // Create the data table.
+                    var data = new google.visualization.DataTable();
+                    data.addColumn('string', 'Topping');
+                    data.addColumn('number', 'Slices');
+                    data.addRows([
+                        ['Aprendices', <?php echo $resultado_a; ?>],
+                        ['Instrucores', <?php echo $resultado_i; ?>],
+                    ]);
+
+                    // Set chart options
+                    var options = {
+                        'title': 'Cantidad de aprendices e instructores',
+                        'is3D': false,
+                        'width': 550,
+                        'height': 350
+                    };
+
+                    // Instantiate and draw our chart, passing in some options.
+                    var chart = new google.visualization.PieChart(document.getElementById('chart_divX'));
+                    chart.draw(data, options);
+                }
+            </script>
+            <!--Div that will hold the pie chart-->
+            <div id="chart_divX"></div>
         </div>
     </div>
     <div class="col-md-6">
@@ -499,8 +548,6 @@
             <div id="chart_div5"></div>
         </div>
     </div>
-</div>
-<div class="row">
     <div class="col-md-6">
         <div class="tile tile-border-top">
             <h4>Tipo Organización General</h4>
@@ -546,7 +593,7 @@
             <div id="chart_div_tipo_general"></div>
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-4">
         <div class="tile tile-border-top">
             <h4>Tipo organización MUESTRA</h4>
             <script type="text/javascript">
@@ -569,8 +616,8 @@
                     data.addColumn('number', 'Slices');
                     data.addRows([
                         <?php
-                        $sql_ccc = $conexion->prepare("SELECT nombre_tipo_ccc, COUNT(*) AS cuentaOrganizacion FROM muestra 
-                        INNER JOIN empresas_2020 ON muestra.id_empresa=empresas_2020.Id
+                        $sql_ccc = $conexion->prepare("SELECT nombre_tipo_ccc, COUNT(*) AS cuentaOrganizacion FROM respuestas 
+                        INNER JOIN empresas_2020 ON respuestas.nit_empresa=empresas_2020.nit
                         INNER JOIN tipo_empresa_cc ON empresas_2020.organizacion = tipo_empresa_cc.id_tipo_cc 
                         GROUP BY nombre_tipo_ccc");
                         $sql_ccc->execute();
@@ -584,7 +631,7 @@
                     var options = {
                         'title': 'Tipo organización (Muestra)',
                         'is3D': false,
-                        'width': 550,
+                        'width': 450,
                         'height': 350
                     };
 
@@ -598,4 +645,3 @@
         </div>
     </div>
 </div>
-

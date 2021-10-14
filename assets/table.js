@@ -19,6 +19,12 @@ $(document).ready( function () {
                 "sNext":    "Siguiente",
                 "sPrevious": "Anterior"
             },
+            buttons: [
+                'copyHtml5',
+                'excelHtml5',
+                'csvHtml5',
+                'pdfHtml5'
+            ],
             "oAria": {
                 "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
                 "sSortDescending": ": Activar para ordenar la columna de manera descendente"

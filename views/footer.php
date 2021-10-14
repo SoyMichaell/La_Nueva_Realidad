@@ -1,6 +1,6 @@
 <!--Footer-->
 <footer class="footer">
-    <p>Todos los derechos reservados 2021 V 1.0</p>
+    <p>Todos los derechos reservados SENNOVA 2021 </p>
 </footer>
 <!--Fin fooer
 -->

@@ -16,7 +16,7 @@
     <div class="row">
         <div class="col-md-3">
             <div class="tile">
-                <h4 id="titulo"><i class="fa fa-book"></i> Manual de usuario</h4>
+                <h4 id="titulo"><i class="fa fa-book"></i> Documentos</h4>
                 <table class="table table-bordered">
                     <thead>
                         <tr>
@@ -31,7 +31,28 @@
                             <th>Manual de usuario</th>
                             <th><a class="btn btn-primary"
                                     href="assets/documentos/Manual de usuario PLATAFORMA LA NUEVA REALIDAD ADMIN.pdf"
-                                    target="_blank"><i class="fa fa-download"></i></a></th>
+                                    target="_blank" title="Descargar Manual de usuario Plataforma La Nueva Realidad"><i class="fa fa-download"></i></a></th>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <th>Carta de Invitación Micro empresarios</th>
+                            <th><a class="btn btn-primary"
+                                    href="assets/documentos/Carta-Invitacion-CO-I.pdf"
+                                    target="_blank" title="Descargar Carta de Invitación"><i class="fa fa-download"></i></a></th>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <th>Guión La Nueva Realidad, Presentación ante micro-empresarios</th>
+                            <th><a class="btn btn-primary"
+                                    href="assets/documentos/Guion-Nueva-Realidad-Presentacion.pdf"
+                                    target="_blank" title="Descargar Guión Nueva Realidad Presentación"><i class="fa fa-download"></i></a></th>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <th>Glosario</th>
+                            <th><a class="btn btn-primary"
+                                    href="assets/documentos/Glosario.pdf"
+                                    target="_blank" title="Descargar Glosario"><i class="fa fa-download"></i></a></th>
                         </tr>
                     </tbody>
                 </table>
@@ -53,19 +74,19 @@
                             <td>1</td>
                             <th>Listado aprendices e instructores</th>
                             <th><a class="btn btn-primary" href="views/view.excel/listado_registro.php"><i
-                                        class="fa fa-download"></i></a></th>
+                                        class="fa fa-download" title="Descargar listado registro personal"></i></a></th>
                         </tr>
                         <tr>
                             <td>2</td>
                             <th>Listado empresas</th>
                             <th><a class="btn btn-primary" href="views/view.excel/listado_empresas_ccc.php"><i
-                                        class="fa fa-download"></i></a></th>
+                                        class="fa fa-download" title="Descargar listado empresas"</i></a></th>
                         </tr>
                         <tr>
                             <td>3</td>
                             <th>Listado empresas seleccionadas para la muestra</th>
                             <th><a class="btn btn-primary" href="views/view.excel/listado_empresas_muestra.php"><i
-                                        class="fa fa-download"></i></a></th>
+                                        class="fa fa-download" title="Descargar listado empresas encuestadas"></i></a></th>
                         </tr>
                     </tbody>
                 </table>

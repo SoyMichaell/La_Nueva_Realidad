@@ -20,6 +20,7 @@
                         <th>Apellido(s)</th>
                         <th>Programa</th>
                         <th>Rol</th>
+                        <th>Estado</th>
                         <th>Fecha Registro</th>
                         <th>Acciones</th>
                     </tr>
@@ -27,7 +28,7 @@
                 <tbody>
                     <?php
                     /*Consulta muestra listado del personal vinculado a la plataforma*/
-                    $sql_persona = $conexion->prepare("SELECT * FROM persona");
+                    $sql_persona = $conexion->prepare("SELECT * FROM persona INNER JOIN estadopersona ON persona.estado=estadopersona.idE");
                     $sql_persona->execute();
                     $data_persona = $sql_persona->fetchAll(PDO::FETCH_ASSOC);
                     foreach ($data_persona as $persona) :
@@ -41,6 +42,13 @@
                             <td><?php echo $persona['apellido']; ?></td>
                             <td><?php echo $persona['programa']; ?></td>
                             <td><?php echo $persona['rol']; ?></td>
+                            <td>
+                                <?php if($persona['nombreE'] == 'Activo'){?>
+                                    <span class="badge bg-success text-white"><?php echo $persona['nombreE']; ?></span>
+                                <?php }else{ ?>
+                                 <span class="badge bg-danger text-white"><?php echo $persona['nombreE']; ?></span>      
+                                 <?php } ?>                         
+                            </td>
                             <td><?php echo $persona['fecha_registro']; ?></td>
                             <td><a class='btn btn-primary' href='registrar_ai.php?id=<?php echo $persona['id'] ?>'>Editar</a></td>
                         </tr>

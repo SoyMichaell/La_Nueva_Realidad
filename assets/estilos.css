@@ -1,10 +1,7 @@
+
 @font-face {
-  font-family: 'Rajdhani';
-  src: url('fuentes/Rajdhani/Rajdhani-Regular.ttf');
-}
-@font-face {
-  font-family: 'RajdhaniBold';
-  src: url('fuentes/Rajdhani/Rajdhani-Bold.ttf');
+  font-family: worksans;
+  src: url('fuentes/Work_Sans/WorkSans-VariableFont_wght.ttf');
 }
 
 @font-face {
@@ -26,7 +23,7 @@
 }
 
 body{
-    font-family: 'Rajdhani' !important;
+    font-family:  worksans !important;
 }
 
 #body__index{
@@ -45,11 +42,12 @@ body{
 }
 
 #titulo,#title__1{
-    font-family: 'RajdhaniBold' !important;
+  font-family:  worksans !important;
+  color: black !important;
 }
 
 #title__formulario{
-  font-family: 'RajdhaniBold' !important;
+  font-family:  worksans !important;
   margin-top: 15% !important;
   font-size: 30px !important;
 }
@@ -66,7 +64,9 @@ label, input[type='password'],input[type='text'],select,option{
     color: white !important;
 }
 .app-header__logo{
-  font-family: 'RajdhaniBold' !important;
+  font-family:  worksans !important;
+  font-weight: 500 !important;
+  font-size: 20px !important;
 }
 
 #perfil{
@@ -211,7 +211,7 @@ label, input[type='password'],input[type='text'],select,option{
     display: block;
   }
   #title__formulario{
-    font-family: 'RajdhaniBold' !important;
+    font-family:  worksans !important;
     font-size: 34px !important;
     margin-top: 0% !important;
   }

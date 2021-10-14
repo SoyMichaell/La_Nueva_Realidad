@@ -62,7 +62,7 @@ $dataEmpresa = $consultaEmpresa->fetch(PDO::FETCH_ASSOC);
                                                                 echo 'bg-success text-white';
                                                             } else if ($contadoDC >= 7 && $contadoDC < 12) {
                                                                 echo 'bg-warning';
-                                                            } else if ($contadoDC > 0 && $contadoDC < 7) {
+                                                            } else if ($contadoDC >= 0 && $contadoDC < 7) {
                                                                 echo 'bg-danger text-white';
                                                             } ?>" style="font-size: 25px;"><?php echo $porcentajeDC; ?></td>
                                     <td id="title_t">25</td>
@@ -73,7 +73,7 @@ $dataEmpresa = $consultaEmpresa->fetch(PDO::FETCH_ASSOC);
                                                                 echo 'bg-success text-white';
                                                             } else if ($contadoPC >= 7 && $contadoPC < 12) {
                                                                 echo 'bg-warning';
-                                                            } else if ($contadoPC > 0 && $contadoPC < 7) {
+                                                            } else if ($contadoPC >= 0 && $contadoPC < 7) {
                                                                 echo 'bg-danger text-white';
                                                             } ?>"><?php echo $porcentajePC; ?></td>
                                     <td id="title_t">25</td>
@@ -84,7 +84,7 @@ $dataEmpresa = $consultaEmpresa->fetch(PDO::FETCH_ASSOC);
                                                                 echo 'bg-success text-white';
                                                             } else if ($contadoPCI >= 7 && $contadoPCI < 12) {
                                                                 echo 'bg-warning';
-                                                            } else if ($contadoPCI > 0 && $contadoPCI < 7) {
+                                                            } else if ($contadoPCI >= 0 && $contadoPCI < 7) {
                                                                 echo 'bg-danger text-white';
                                                             } ?>"><?php echo $porcentajePCI; ?></td>
                                     <td id="title_t">25</td>
@@ -95,7 +95,7 @@ $dataEmpresa = $consultaEmpresa->fetch(PDO::FETCH_ASSOC);
                                                                 echo 'bg-success text-white';
                                                             } else if ($contadoPF >= 7 && $contadoPF < 12) {
                                                                 echo 'bg-warning';
-                                                            } else if ($contadoPF > 0 && $contadoPF < 7) {
+                                                            } else if ($contadoPF >= 0 && $contadoPF < 7) {
                                                                 echo 'bg-danger text-white';
                                                             } ?>"><?php echo $porcentajePF; ?></td>
                                     <td id="title_t">25</td>

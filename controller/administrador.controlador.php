@@ -14,11 +14,13 @@ if(isset($_POST['btnAccion'])){
                 $BuscarUsuario = $conexion->prepare("SELECT * FROM persona WHERE (tipo_identificacion = '$usuario' && contrasena = '$password')");
                 $BuscarUsuario->execute();
                 if($BuscarUsuario->rowCount()>0){
-                    //$ActualizarEstado = $conexion->prepare("UPDATE persona SET estado = 'En Linea' WHERE (tipo_identificacion = '$usuario' && numero_identificacion = '$password')");
-                    //$ActualizarEstado->execute();
                     $dataPersona = $BuscarUsuario->fetch(PDO::FETCH_ASSOC);
+                    if($dataPersona['estado'] == 1 && $dataPersona['rol'] == 'Administrador'){
                     $_SESSION['usuario'] = $dataPersona['id'];
                     header('location: dashboard.php');
+                    }else{
+                        $mensaje = "Su rol o estado no permite el ingreso a la plataforma";
+                    }
                 }else{
                     $mensaje = "Usuario o Contraseña incorrectos";
                 } 

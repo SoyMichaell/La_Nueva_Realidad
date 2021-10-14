@@ -1,4 +1,7 @@
 <?php
+
+
+
     /*Consulta nit empresas*/
     $consultaReporteActividad = $conexion->prepare('SELECT SUBSTRING(ciiu_actividad1,1,1) as s ,perspectiva_c_d,perspectiva_c,perspectiva_p_i,perspectiva_f,total_perspectivas FROM diagnostico_global 
     INNER JOIN empresas_2020 ON diagnostico_global.nit_empresa_d = empresas_2020.nit');
@@ -8,7 +11,11 @@
     $consultaNitEmpresasI = $conexion->prepare('SELECT COUNT(*) as cuentaR FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa = empresas_2020.nit');
     $consultaNitEmpresasI->execute();
     $dataConsultaNitEmpresasI = $consultaNitEmpresasI->fetch();
-    if($dataConsultaNitEmpresasI['cuentaR']>0){
+
+    $consultaDiagnosticoGlobal = $conexion->prepare('SELECT COUNT(*) as cuentaDG FROM diagnostico_global');
+    $consultaDiagnosticoGlobal->execute();
+    $dataDiagnosticoGlobal = $consultaDiagnosticoGlobal->fetch();
+    if($dataDiagnosticoGlobal['cuentaDG']>0){
 ?>
 <div class="row">
     <div class="col-md-12">
@@ -44,5 +51,5 @@
     </div>
 </div>
 <?php
-    }else{ echo '<div class="tile"><h3>No hay registros</h3></div>'; }
+    }else{ echo '<div class="row"><div class="col-md-12"><div class="tile"><h3>No hay registros</h3></div></div></div>'; }
 ?>

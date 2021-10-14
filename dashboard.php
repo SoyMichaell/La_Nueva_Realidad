@@ -19,11 +19,8 @@
             case 'Administrador':
                 require_once 'views/view.admin/admin.dashboard.php'; // Requiere vista admin dashboard
             break;
-            case 'Instructor':
-                require_once 'views/view.instructor/ins.dashboard.php';
-            break;
-            case 'Aprendiz':
-                require_once 'views/views.aprendiz/aprendiz.dashboard.php';
+            default:
+                header('location: ./');
             break;
         }
     ?>

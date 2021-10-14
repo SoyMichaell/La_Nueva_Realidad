@@ -7,23 +7,23 @@
     $consultaNitEmpresasI = $conexion->prepare('SELECT COUNT(*) as cuentaR FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa = empresas_2020.nit');
     $consultaNitEmpresasI->execute();
     $dataConsultaNitEmpresasI = $consultaNitEmpresasI->fetch();
+    echo $dataConsultaNitEmpresasI['cuentaR'];
     if($dataConsultaNitEmpresasI['cuentaR']>0){
 ?>
 <div class="row">
     <div class="col-md-8">
-        <div class="tile">
-
+        <div class="tile p-3">
             <h3>Generación de reportes</h3>
             <!--Formulario diagnostico global-->
             <form action="dglobal.php?" method="get">
                 <div class="form-group">
                     <label for="">Nit de la empresa:</label>
                     <select class="form-control" name="nitEmpresaConsultar">
-                        <?php   
-                                foreach($dataConsultaNitEmpresas as $dataNitEmpresas):
-                            ?>
+                        <?php  
+                            foreach($dataConsultaNitEmpresas as $dataNitEmpresas):
+                        ?>
                         <option value="<?php echo $dataNitEmpresas['nit']; ?>">
-                            <?php echo $dataNitEmpresas['nit'].' | '.$dataNitEmpresas['razon_social']; ?></option>
+                            <?php echo $dataNitEmpresas['nit'].' | '.$dataNitEmpresas['razon_social']?></option>
                         <?php
                                 endforeach;
                             ?>
@@ -45,12 +45,8 @@
                     </label>
                 </div>
                 <!---->
-                <button class="btn btn-primary mt-3" style="float: left; margin: 5px;" type="submit" title="Consultar Diagnosticos"><i class="fas fa-search"></i> Consultar</button>
+                <button class="btn btn-primary mt-3" type="submit" title="Consultar Diagnosticos"><i class="fas fa-search"></i> Consultar</button>
             </form>
-                <form action="controller/empresa.controlador.php" method="post">
-                    <button class="btn btn-danger mt-3" name="btnAccion" value="EliminarDiagnostico" title="Eliminar Diagnosticos Guardados En La BD" type="submit"><i class="fas fa-trash-alt"></i> Eliminar</button>
-                </form>
-                
             <!--Fin formulario-->
         </div>
     </div>

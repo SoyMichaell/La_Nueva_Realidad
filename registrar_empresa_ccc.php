@@ -24,14 +24,6 @@ $dataEmpresaCCC = $buscarEmpresaCCC->fetch(PDO::FETCH_ASSOC);
             <div class="tile">
                 <div class="tile-title-w-btn">
                     <h3 class="title"><?php echo $dataEmpresaCCC['razon_social']; ?></h3>
-                    <?php
-                    $consulta_estado = $conexion->prepare("SELECT * FROM muestra WHERE id_empresa = $idEmpresaCCC ");
-                    $consulta_estado->execute();
-                    if ($consulta_estado->rowCount() > 0) { ?>
-                        <div class="badge badge-pill badge-primary">Seleccionada</div>
-                    <?php } else { ?>
-                        <div class="badge badge-pill badge-danger">No seleccionada</div>
-                    <?php } ?>
                 </div>
                 <form action="controller/empresa.controlador.php" method="post">
                     <div class="row">

@@ -30,7 +30,7 @@ $conexion = new Conexion();
             <th>Municipio</th>
         </tr>
         <?php
-        $consulta = $conexion->prepare("SELECT * FROM muestra INNER JOIN empresas_2020 ON muestra.id_empresa = empresas_2020.Id");
+        $consulta = $conexion->prepare("SELECT * FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa = empresas_2020.nit");
         $consulta->execute();
         $dataEmpresa = $consulta->fetchAll(PDO::FETCH_ASSOC);
         foreach ($dataEmpresa as $data) :
