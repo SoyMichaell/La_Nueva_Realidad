@@ -21,6 +21,7 @@ require_once "controller/administrador.controlador.php";
 </head>
 
 <body>
+    <?php if(isset($_SESSION['usuario'])){ header('location: dashboard.php'); }else{ ?>
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-9" id="contenido__uno"></div>
@@ -75,6 +76,7 @@ require_once "controller/administrador.controlador.php";
             </div>
         </div>
     </div>
+    <?php } ?>
 </body>
 <script src="assets/redirect.js"></script>
 <script src="assets/js/jquery-3.3.1.min.js"></script>

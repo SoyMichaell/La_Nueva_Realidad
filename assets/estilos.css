@@ -41,6 +41,11 @@ body{
   margin-top: 5% !important;
 }
 
+.dropdown-menu{
+  width: 300px !important;
+  padding: 5px;
+}
+
 #titulo,#title__1{
   font-family:  worksans !important;
   color: black !important;

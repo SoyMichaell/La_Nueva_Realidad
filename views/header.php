@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>La Nueva Realidad | SENA</title>
     <meta charset="utf-8">
