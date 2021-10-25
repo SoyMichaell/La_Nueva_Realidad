@@ -1,13 +1,13 @@
 <?php
     /*Consulta nit empresas*/
-    $consultaNitEmpresas = $conexion->prepare('SELECT * FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa = empresas_2020.nit');
+    $consultaNitEmpresas = $conexion->prepare('SELECT * FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa = empresas_2020.nit ORDER BY fecha desc ');
     $consultaNitEmpresas->execute();
     $dataConsultaNitEmpresas = $consultaNitEmpresas->fetchAll();
     /*Fin consulta*/
     $consultaNitEmpresasI = $conexion->prepare('SELECT COUNT(*) as cuentaR FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa = empresas_2020.nit');
     $consultaNitEmpresasI->execute();
     $dataConsultaNitEmpresasI = $consultaNitEmpresasI->fetch();
-    echo $dataConsultaNitEmpresasI['cuentaR'];
+      echo $dataConsultaNitEmpresasI['cuentaR'];
     if($dataConsultaNitEmpresasI['cuentaR']>0){
 ?>
 <div class="row">
@@ -19,7 +19,7 @@
                 <div class="form-group">
                     <label for="">Nit de la empresa:</label>
                     <select class="form-control" name="nitEmpresaConsultar">
-                        <?php  
+                        <?php
                             foreach($dataConsultaNitEmpresas as $dataNitEmpresas):
                         ?>
                         <option value="<?php echo $dataNitEmpresas['nit']; ?>">
@@ -67,8 +67,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php 
-                        foreach ($dataEmpresa as $empresa) : 
+                    <?php
+                        foreach ($dataEmpresa as $empresa) :
                     ?>
                     <tr>
                         <td><?php echo $empresa['nit_empresa_d']; ?></td>

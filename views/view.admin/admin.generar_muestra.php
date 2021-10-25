@@ -1,11 +1,11 @@
 <?php
     /*Consulta tabla muestra, para tener un conteo de registros*/
-    $sql_muestra = $conexion->prepare("SELECT * FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa=empresas_2020.nit");
+    $sql_muestra = $conexion->prepare('SELECT * FROM respuestas INNER JOIN empresas_2020 ON respuestas.nit_empresa=empresas_2020.nit');
     $sql_muestra->execute();
     $data_muestra = $sql_muestra->fetch(PDO::FETCH_ASSOC);
     /*Fin consulta*/
     //Validacion, SI el conteo es > 0 se muestran los registros
-    if ($sql_muestra->rowCount() > 0) { 
+    if ($sql_muestra->rowCount() > 0) {
 ?>
     <div class="row">
         <div class="col-md-12">
@@ -27,7 +27,7 @@
                             <th>ID</th>
                             <th>Nit empresa</th>
                             <th>Razón social</th>
-                            <th>Actividad Economica</th>
+                            <!--<th>Actividad Economica</th>-->
                             <th>Dirección</th>
                             <th>Correo electronico</th>
                             <th>Telefono</th>
@@ -44,13 +44,13 @@
                             /*Fin consulta*/
                             $id = 1;
                             foreach ($dataMuestra as $muestra) :
-                                
+
                         ?>
                             <tr>
                                 <td><?php echo $id++; ?></td>
                                 <td><?php echo $muestra['nit']; ?></td>
                                 <td><?php echo $muestra['razon_social']; ?></td>
-                                <td><?php echo $muestra['ciiu_actividad1'] ?></td>
+                                <!--<td><?php //echo $muestra['ciiu_actividad1'] ?></td>-->
                                 <td><?php echo $muestra['direccion']; ?></td>
                                 <td><?php echo $muestra['correo']; ?></td>
                                 <td><?php echo $muestra['telefono1']; ?></td>

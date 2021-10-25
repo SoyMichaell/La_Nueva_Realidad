@@ -1,9 +1,6 @@
 <?php
-
-
-
     /*Consulta nit empresas*/
-    $consultaReporteActividad = $conexion->prepare('SELECT SUBSTRING(ciiu_actividad1,1,1) as s ,perspectiva_c_d,perspectiva_c,perspectiva_p_i,perspectiva_f,total_perspectivas FROM diagnostico_global 
+    $consultaReporteActividad = $conexion->prepare('SELECT SUBSTRING(ciiu_actividad1,1,1) as s ,perspectiva_c_d,perspectiva_c,perspectiva_p_i,perspectiva_f,total_perspectivas FROM diagnostico_global
     INNER JOIN empresas_2020 ON diagnostico_global.nit_empresa_d = empresas_2020.nit');
     $consultaReporteActividad->execute();
     $dataReporteActividad = $consultaReporteActividad->fetchAll();
@@ -26,7 +23,7 @@
                 <div class="form-group">
                     <label for="">Clasificación Actividad Economica:</label>
                     <select class="form-control" name="sActividad">
-                        <?php   
+                        <?php
                                 foreach($dataReporteActividad as $dataReporte):
                             ?>
                         <option value="<?php echo $dataReporte['s']; ?>"><?php echo $dataReporte['s']?></option>
