@@ -561,7 +561,7 @@ if($datPuntaje['pre1_pi'] == 'Gerenciales, Administrativos, Operativos, Comercia
   $contadoPCI += 1.32;
 }else if($datPuntaje['pre1_pi'] == 'Gerenciales, Administrativos, Operativos' || $datPuntaje['pre1_pi'] == 'Gerenciales, Administrativos, Comerciales' || $datPuntaje['pre1_pi'] == 'Gerenciales, Administrativos, Talento Humano' || $datPuntaje['pre1_pi'] == 'Gerenciales, Administrativos, Productivo'){
   $contadoPCI += 0.99;
-}else if($datPuntaje['pre1_pi'] == 'Gerenciales, Administrativos' || $datPuntaje['pre1_pi'] == 'Gerenciales, Operativos' || $datPuntaje['pre1_pi'] == 'Gerenciales, Comerciales' || $datPuntaje['Gerenciales, Talento Humano'] || $datPuntaje['Gerenciales, Productivo']){
+}else if($datPuntaje['pre1_pi'] == 'Gerenciales, Administrativos' || $datPuntaje['pre1_pi'] == 'Gerenciales, Operativos' || $datPuntaje['pre1_pi'] == 'Gerenciales, Comerciales' || $datPuntaje['pre1_pi'] == 'Gerenciales, Talento Humano' || $datPuntaje['pre1_pi'] == 'Gerenciales, Productivo'){
   $contadoPCI += 0.66;
 }else if($datPuntaje['pre1_pi'] == 'Gerenciales' || $datPuntaje['pre1_pi'] == 'Administrativos' || $datPuntaje['pre1_pi'] == 'Operativos' || $datPuntaje['pre1_pi'] == 'Comerciales' || $datPuntaje['pre1_pi'] == 'Talento Humano' || $datPuntaje['pre1_pi'] == 'Productivo'){
   $contadoPCI += 0.33;
@@ -571,7 +571,7 @@ if($datPuntaje['pre2_pi'] == 'Manuales de procedimientos, Flujogramas, Instructi
   $contadoPCI += 2;
 }else if($datPuntaje['pre2_pi'] == 'Manuales de procedimientos, Flujogramas, Instructivos' || $datPuntaje['pre2_pi'] == 'Manuales de procedimientos, Flujogramas, Organigramas'){
   $contadoPCI += 1.5;
-}else if($datPuntaje['pre2_pi'] == 'Manuales de procedimientos, Flujogramas' || $datPuntaje['Manuales de procedimientos, Instructivos'] || $datPuntaje['Manuales de procedimientos, Organigramas']){
+}else if($datPuntaje['pre2_pi'] == 'Manuales de procedimientos, Flujogramas' || $datPuntaje['pre2_pi'] == 'Manuales de procedimientos, Instructivos' || $datPuntaje['pre2_pi'] == 'Manuales de procedimientos, Organigramas'){
   $contadoPCI += 1;
 }else if($datPuntaje['pre2_pi'] == 'Manuales de procedimientos' || $datPuntaje['pre2_pi'] == 'Flujogramas' || $datPuntaje['pre2_pi'] == 'Instructivos' || $datPuntaje['pre2_pi'] == 'Organigramas'){
   $contadoPCI += 0.5;
@@ -706,7 +706,7 @@ if($datPuntaje['pre8_pi'] == 'Muy bueno'){
 /*Perspectiva FINANCIERA*/
 
 if($datPuntaje['pre1_pf'] == 'Si'){
-    $contadoPF++;
+    $contadoPF += 2;
 }
 
 if($datPuntaje['pre1.1_pf'] != ''){
@@ -714,11 +714,11 @@ if($datPuntaje['pre1.1_pf'] != ''){
 }
 
 if($datPuntaje['pre2_pf'] == 'Si'){
-    $contadoPF++;
+    $contadoPF += 2;
 }
 
 if($datPuntaje['pre3.1_pf'] == 'Si'){
-    $contadoPF++;
+    $contadoPF += 2;
 }
 
 if($datPuntaje['pre3.2_pf'] == 'Si'){
@@ -815,10 +815,18 @@ if($datPuntaje['pre13_pf'] == 'Aumentaron'){
     $contadoPF -= 0.5;
 }
 
-if($datPuntaje['pre14_pf'] == 'Baja incorporacion de plataformas digitales'){}
+if($datPuntaje['pre14_pf'] == 'Baja incorporacion de plataformas digitales'){
+  $contadoPF += 0.25;
+}else if($datPuntaje['pre14_pf'] == 'Baja implementacion de medios de comunicacion (redes sociales)'){
+  $contadoPF += 0.25;
+}else if($datPuntaje['pre14_pf'] == 'Baja publicidad'){
+  $contadoPF += 1.5;
+}else if($datPuntaje['pre14_pf'] == 'Disminucion de ventas'){
+  $contadoPF +=1.5;
+}
 
 if($datPuntaje['pre15_pf'] == 'Si'){
-    $contadoPF++;
+    $contadoPF += 1.5;
 }
 
 

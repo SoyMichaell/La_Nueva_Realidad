@@ -8,7 +8,7 @@
     //Inicia la sesion
     session_start();
     //Omite el reporte de errores
-    error_reporting(0);
+    //error_reporting(0);
     //Valor de la sesion
     $id = $_SESSION['usuario'];
 
@@ -19,8 +19,8 @@
         $data = $sql_persona->fetch(PDO::FETCH_ASSOC);
         $programa_persona = $data['programa'];
         $rol_persona = $data['rol'];
-        /*Fin consulta*/ 
+        /*Fin consulta*/
     }
 
-    
+
 ?>

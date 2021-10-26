@@ -1,7 +1,7 @@
-<?php 
+<?php
 require 'views/session.php';
 if(isset($_SESSION['usuario'])){
-require_once 'views/header.php'; 
+require_once 'views/header.php';
 $nitEmpresa = $_GET['nitEmpresaConsultar'];
 $tipoReporte = $_GET['tipoReporte'];
 $consultaEmpresa = $conexion->prepare("SELECT * FROM empresas_2020 WHERE nit = '$nitEmpresa'");
@@ -202,8 +202,8 @@ $dataEmpresa = $consultaEmpresa->fetch(PDO::FETCH_ASSOC);
         case 'dd': ?>
             <div class="row">
                 <div class="col-md-12">
-                    <div class="tile">
-                        <h3>Reporte diagnostico detallado</h3>
+                    <div class="">
+                        <h3 class="tile">Reporte diagnostico detallado</h3>
                         <?php require_once "views/view.reporte/preguntas.php"; ?>
                     </div>
                 </div>
@@ -211,9 +211,9 @@ $dataEmpresa = $consultaEmpresa->fetch(PDO::FETCH_ASSOC);
     <?php break;
     } ?>
 </main>
-<br>    
-<?php 
-    require_once "views/footer.php"; 
+<br>
+<?php
+    require_once "views/footer.php";
     }else{
         require_once '404.php';
     }

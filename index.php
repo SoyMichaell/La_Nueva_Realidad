@@ -1,5 +1,5 @@
 <?php
-//Rquiero el archivo conexion.php 
+//Rquiero el archivo conexion.php
 //Hago una instancia de la clase Conexio
 //Requiero el archivo administrador.controlador.php que es donde contiene las validaciones
 require_once "model/conexion.php";

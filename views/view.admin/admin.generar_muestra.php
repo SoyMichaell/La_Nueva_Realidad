@@ -5,21 +5,25 @@
     $data_muestra = $sql_muestra->fetch(PDO::FETCH_ASSOC);
     /*Fin consulta*/
     //Validacion, SI el conteo es > 0 se muestran los registros
-    if ($sql_muestra->rowCount() > 0) {
+    if ($sql_muestra->rowCount() >= 0) {
 ?>
     <div class="row">
-        <div class="col-md-12">
+      <div class="col-md-12 d-flex justify-content-end">
+          <form action="controller/empresa.controlador.php" method="post" enctype="multipart/form-data">
+            Registro masivos: <input type="file" name="datos">
+            <button class="btn btn-primary" type="submit" name="btnAccion" value="CargaMasiva">Enviar</button>
+          </form>
+      </div>
+        <div class="col-md-12 mt-3">
             <div class="tile">
                 <div class="row">
                     <div class="col-md-12">
                         <p style="font-size: 28px;">Empresas seleccionadas para el proceso de encuestas</p>
                         <hr>
                     </div>
-                    <div class="p-3">
-                        <a class="btn btn-light" href="https://docs.google.com/spreadsheets/d/1qwHbDJ_mY11vR93ZZhC3VT-7GZSpGnOR41M7VC_X-no/edit?usp=sharing" target="_blank">Aplicativo proceso encuestas</a>
-                    </div>
+                    <a class="btn btn-light ml-3" href="https://docs.google.com/spreadsheets/d/1qwHbDJ_mY11vR93ZZhC3VT-7GZSpGnOR41M7VC_X-no/edit?usp=sharing" target="_blank">Aplicativo proceso encuestas</a>
                 </div>
-                <br>
+                <hr>
                 <!--Inicio listado empresas-->
                 <table class="table" id="ListadoEmpresasSeleccionadas">
                     <thead>
@@ -47,7 +51,7 @@
 
                         ?>
                             <tr>
-                                <td><?php echo $id++; ?></td>
+                                <td><?php echo $muestra['id']; ?></td>
                                 <td><?php echo $muestra['nit']; ?></td>
                                 <td><?php echo $muestra['razon_social']; ?></td>
                                 <!--<td><?php //echo $muestra['ciiu_actividad1'] ?></td>-->
