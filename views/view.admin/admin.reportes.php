@@ -76,7 +76,7 @@
                 </tbody>
             </table>
             <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Eliminar</button>
-            <a class="btn btn-info" href="pdf.php">Generar PDF</a>
+            <a class="btn btn-info" href="pdf.php" target="_blank">Generar PDF</a>
             <?php } else{ echo '<div class="alert alert-info"><p style="font-size:24px"><i class="fas fa-info-circle"></i> No hay diagnosticos almacenadoss</p></div>'; } ?>
         </div>
     </div>

@@ -101,6 +101,16 @@ label, input[type='password'],input[type='text'],select,option{
   background-color: #fff;
 }
 
+
+
+#btn__mostrar{
+  border: none;
+  background-color: #fff;
+  margin-right: 10px;
+  float: right;
+  margin-top: -5%;
+}
+
 /*Header Editor*/
 .ql-snow{
   background-color: white;;

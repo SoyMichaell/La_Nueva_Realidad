@@ -1,7 +1,7 @@
-<?php 
+<?php
     require_once 'views/session.php';
     if(isset($_SESSION['usuario'])){
-    require_once 'views/header.php'; 
+    require_once 'views/header.php';
 ?>
 <main class="app-content">
     <div class="app-title">
@@ -29,15 +29,15 @@
             <div class="tile">
                 <h1 id="titulo">La Nueva Realidad</h1>
                 <p style="font-size: 18px;">El presente instrumento fué diseñado y estructurado por SENNOVA como parte del proyecto La Nueva Realidad: Microempresarios Casanareños Frente al Primer Año de Convivencia con el Covid-19. Instrumento de Diagnóstico, Análisis de Impacto e Identificación de Estrategias Innovadoras para la Recuperación del Sector, la información obtenida será utilizada para efectos académicos y su divulgación estará orientada a la Comunidad Académica SENA.</p>
-                <div class="alert alert-info" role="alert">
+                <div class="alert alert-warning" role="alert">
                   <p style="font-size: 18px;"><i class="fas fa-info-circle"></i> El cargue de las respuestas dadas por los <b>MICROEMPRESARIOS</b> se realiza cada 24 horas despues de las 18:00</p>
                 </div>
             </div>
         </div>
     </div>
 </main>
-<?php 
-    require_once "views/footer.php"; 
+<?php
+    require_once "views/footer.php";
     }else{
         require_once '404.php';
     }
