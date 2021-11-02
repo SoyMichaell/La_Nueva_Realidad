@@ -26,12 +26,12 @@
             <li><a class="treeview-item" href="reportesActividad.php"><i class="icon far fa-circle"></i>Diagnostico por Actividad Economica</a></li>
         </ul>
     </li>
-    <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-edit"></i><span class="app-menu__label">Estrategias</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+    <!--<li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-edit"></i><span class="app-menu__label">Estrategias</span><i class="treeview-indicator fa fa-angle-right"></i></a>
         <ul class="treeview-menu">
             <li><a class="treeview-item" href="editor.php"><i class="icon far fa-circle"></i>Crear estrategia</a></li>
             <li><a class="treeview-item" href="publicaciones.php"><i class="icon far fa-circle"></i>Publicadas</a></li>
         </ul>
-    </li>
+    </li>-->
     <li><a class="app-menu__item" href="informacion.php"><i class="app-menu__icon fa fa-question-circle"></i><span class="app-menu__label">Información</span></a></li>
 </ul>
 <!--Fin barra lateral-->

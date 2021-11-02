@@ -35,7 +35,7 @@ body{
   min-height: 400px !important;
   max-height: 500px !important;
   /*border: 2px solid black !important;*/
-} 
+}
 
 #formulario__inter{
   margin-top: 5% !important;
@@ -84,18 +84,21 @@ label, input[type='password'],input[type='text'],select,option{
   cursor: pointer;
 }
 
-#contenido__uno{
+#login{
+  border: 1px solid black;
   background-image: url('imagenes/priscilla-du-preez-XkKCui44iM0-unsplash.jpg');
   background-size: cover;
-}
-
-#contenido__dos{
-  height: 937px;
+  min-height: 100vh;
 }
 
 .contenido__interno{
+  width: 450px;
+  margin: auto;
+  margin-top: 10%;
   padding: 30px;
-  margin-top: 35%;
+  border-radius: 10px;
+  opacity: 0.9;
+  background-color: #fff;
 }
 
 /*Header Editor*/
@@ -116,6 +119,11 @@ label, input[type='password'],input[type='text'],select,option{
 }
 .btn-primario:hover{
   background-color: var(--ms-naranja-oscuro) !important;
+}
+
+#tile-diagnostico{
+  height: 750px;
+  overflow-y: scroll;
 }
 
 .footer{
@@ -201,11 +209,11 @@ label, input[type='password'],input[type='text'],select,option{
   }
   #formulario__registro{
     border: none;
-  } 
+  }
   #form__login{
     width: 90%;
     padding: 30px;
-    margin-top: 30%;
+    margin-top: 20%;
     border-radius: 5px;
   }
   #content__1,#img__1,#titulo{
@@ -248,7 +256,7 @@ label, input[type='password'],input[type='text'],select,option{
   #form__login{
     width: 90%;
     padding: 30px;
-    margin-top: 15%;
+
     border-radius: 5px;
     opacity: 0.9;
   }

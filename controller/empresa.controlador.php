@@ -286,8 +286,15 @@ if (isset($_POST['btnAccion'])) {
               }
             }
             flcose($handle);
-
-
+        break;
+        case 'EliminarReportes':
+          $EliminarReportes = $conexion->prepare('TRUNCATE TABLE diagnostico_global');
+          $EliminarReportes->execute();
+          if(!$EliminarReportes){
+            echo "Algo fallo";
+          }else{
+            header('location: ../reportes.php');
+          }
         break;
       }
 }

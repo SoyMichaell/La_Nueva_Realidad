@@ -1,7 +1,7 @@
-<?php 
+<?php
     require 'views/session.php';
     if(isset($_SESSION['usuario'])){
-    require_once 'views/header.php'; 
+    require 'views/header.php';
 ?>
 <main class="app-content">
     <div class="app-title">
@@ -25,9 +25,9 @@
         }
     ?>
 </main>
-<?php 
-    require_once "views/footer.php"; 
+<?php
+      require 'views/footer.php';
     }else{
-        require_once '404.php';
+      require '404.php';
     }
 ?>

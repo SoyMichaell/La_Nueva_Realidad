@@ -22,12 +22,10 @@ require_once "controller/administrador.controlador.php";
 
 <body>
     <?php if(isset($_SESSION['usuario'])){ header('location: dashboard.php'); }else{ ?>
-    <div class="container-fluid">
+    <div class="container-fluid" id=login>
         <div class="row">
-            <div class="col-lg-9" id="contenido__uno"></div>
-            <div class="col-lg-3" id="contenido__dos">
+            <div class="col-lg-12" id="contenido__dos">
                 <div class="contenido__interno">
-                    <br>
                     <div class="logo">
                         <img class="img-fluid mx-auto d-block" src="assets/imagenes/senasennova.png" width="350">
                     </div>
@@ -70,7 +68,7 @@ require_once "controller/administrador.controlador.php";
                         <!--Fin formulario de login-->
                     </div>
                     <div class="footer-d">
-                        <p class="font-weight-bold">Servicio Nacional de Aprendizaje SENA | SENNOVA</p>
+                        <p class="font-weight-bold btn-primario">Servicio Nacional de Aprendizaje SENA | SENNOVA</p>
                     </div>
                 </div>
             </div>
